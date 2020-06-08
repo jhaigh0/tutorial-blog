@@ -18,7 +18,7 @@ class NoramlVisitorTest(LiveServerTestCase):
 
         #Sees the button labled CV
         cv_button = self.browser.find_element_by_id('id_cv_button')
-        assertEqual(cv_button.get_attribute('class'), 'cv_Button')
+        self.assertEqual(cv_button.get_attribute('class'), 'cv_Button')
 
         #Clicks on the CV button and is taken to the cv site
         cv_button.click()

@@ -10,3 +10,5 @@ db.sqlite3
 /TDDBook/db.sqlite3
 /TDDBook/geckodriver.log
 /TDDBook/virtualenv
+geckodriver.log
+secondve
