@@ -31,6 +31,15 @@ class NoramlVisitorTest(LiveServerTestCase):
         header_text = self.browser.find_element_by_tag_name('h1').text
         self.assertIn('CV', header_text)
 
+        #Sees my personal info under the main title
+        email = 'jonathanhaigh0@gmail.com'
+        number = '07527744192'
+        address = '56 Cherry Tree Avenue Haslemere GU27 1JP'
+        details_text = self.browser.find_element_by_tag_name('ul').text
+        self.assertIn(email, details_text)
+        self.assertIn(number, details_text)
+        self.assertIn(address, details_text)
+
 
 class AdminVisitorTest(LiveServerTestCase):
 
@@ -57,4 +66,4 @@ class AdminVisitorTest(LiveServerTestCase):
         self.browser.quit()
 
     def test_can_add_education(self):
-        time.sleep(10)
+        time.sleep(2)
