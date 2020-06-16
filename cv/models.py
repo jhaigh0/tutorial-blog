@@ -6,8 +6,9 @@ class CV_Element(models.Model):
     start_date = models.DateField()
     end_date = models.DateField()
     text = models.TextField()
-
-    def save(delf):
+    type_id = models.CharField(max_length=200, default='place_holder')
+    
+    def publish(self):
         self.save()
 
     def __str__(self):
