@@ -6,12 +6,12 @@ ul{
     margin: 0;
 }
 
-li{
+.details{
     display: inline;
     padding: 0px;
 }
 
-.middot > li:not(:last-child)::after{
+.middot > .details:not(:last-child)::after{
     content: "*";
     margin: 20px
 }
@@ -21,4 +21,21 @@ li{
     background-color: #85adad;
     margin-top: 0;
     padding: 5px 20px 50px 20px;
+}
+
+.dyanmic_content{
+
+}
+
+.dates{
+    margin: 20px
+}
+
+.date{
+    display: inline;
+    padding: 10px;
+}
+
+.intro{
+    text-align: center;
 }
