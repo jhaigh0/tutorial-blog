@@ -1,9 +1,42 @@
 body{
     font-family: 'Roboto Slab', serif;
+    background-color: #e8e9e1;
 }
 
 ul{
     margin: 0;
+}
+
+h3{
+
+}
+
+a:link, a:visited{
+    text-decoration: none;
+}
+
+a.entry-btn:link, a.entry-btn:visited{
+    color: #4f0c0e;
+}
+
+a.entry-btn:hover{
+    background-color: #a27d56;
+}
+
+a.entry-title:link, a.entry-title:visited{
+    color: #a27d56;
+}
+
+a.entry-title:hover{
+    background-color: #f5fffa;
+}
+
+.page-header{
+    text-align: center;
+    background-color: #cfc89f;
+    color: #4f0c0e;
+    margin-top: 0;
+    padding: 5px 20px 40px 20px;
 }
 
 .details{
@@ -11,24 +44,17 @@ ul{
     padding: 0px;
 }
 
+.middot{
+    padding-bottom: 20px;
+}
+
 .middot > .details:not(:last-child)::after{
     content: "*";
     margin: 20px
 }
 
-.page-header{
-    text-align: center;
-    background-color: #85adad;
-    margin-top: 0;
-    padding: 5px 20px 50px 20px;
-}
-
-.dyanmic_content{
-
-}
-
-.dates{
-    margin: 20px
+.entry-btn{
+    padding: 20px;
 }
 
 .date{
@@ -37,5 +63,16 @@ ul{
 }
 
 .intro{
+    display: block;
     text-align: center;
+}
+
+.education, .skills, .employment, .interests{
+    margin-left: 500px;
+    color: #4f0c0e;
+}
+
+.entry{
+    margin-left: 50px;
+    color: #a27d56;
 }
