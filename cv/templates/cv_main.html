@@ -2,6 +2,7 @@
 <html>
     <head>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'css/cv.css' %}">
         <title>Jonathan's CV</title>
     </head>
@@ -14,14 +15,14 @@
                 <li class="details">56 Cherry Tree Avenue Haslemere GU27 1JP</li>
             </ul>
             {% if user.is_authenticated %}
-                <a href="{% url 'new_dated' %}" class="entry-btn">Enter new dated entry</a>
-                <a href="{% url 'new_titled' %}" class="entry-btn">Enter new titled entry</a>
-                <a href="{% url 'new_text' %}" class="entry-btn">Enter new text entry</a>
+                <a href="{% url 'new_dated' %}" class="entry-btn" id="new-dated-btn">Enter new dated entry</a>
+                <a href="{% url 'new_titled' %}" class="entry-btn" id="new-titled-btn">Enter new titled entry</a>
+                <a href="{% url 'new_text' %}" class="entry-btn" id="new-text-btn">Enter new text entry</a>
             {% endif %}
         </div>
         <div class="dyanmic-content">
             {% if user.is_authenticated %}
-                <a class="intro entry-btn" href="{% url 'edit_text' pk=intro.pk %}">Edit</a>
+                <a class="intro entry-btn" href="{% url 'edit_text' pk=intro.pk %}" id="edit-text-btn">Edit</a>
             {% endif %}
             <p class="intro">{{ intro.text|linebreaksbr }}</p>
             <div class="education">
@@ -37,6 +38,8 @@
                             <li class="date">{{ item.start_date }}</li>
                             {% if item.ended %}
                                 <li class="date">{{ item.end_date }}</li>
+                            {% else %}
+                                <li class="date">Present</li>
                             {% endif %}
                         </ul>
                         <p class="text-content">{{ item.text|linebreaksbr }}</p>
@@ -69,6 +72,8 @@
                             <li class="date">{{ item.start_date }}</li>
                             {% if item.ended %}
                                 <li class="date">{{ item.end_date }}</li>
+                            {% else %}
+                                <li class="date">Present</li>
                             {% endif %}
                         </ul>
                         <p class="text-content">{{ item.text|linebreaksbr }}</p>

@@ -1,5 +1,5 @@
 body{
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #e8e9e1;
 }
 
@@ -7,8 +7,10 @@ ul{
     margin: 0;
 }
 
-h3{
-
+h2{
+    border-left-style: solid;
+    border-width: 4px;
+    padding-left: 5px;
 }
 
 a:link, a:visited{
@@ -39,11 +41,6 @@ a.entry-title:hover{
     padding: 5px 20px 40px 20px;
 }
 
-.details{
-    display: inline;
-    padding: 0px;
-}
-
 .middot{
     padding-bottom: 20px;
 }
@@ -53,13 +50,30 @@ a.entry-title:hover{
     margin: 20px
 }
 
+.details{
+    display: inline;
+    padding: 0px;
+}
+
 .entry-btn{
     padding: 20px;
 }
 
+.intro{
+    color: #a27d56;
+}
+
+.dates{
+    padding: 0px;
+}
+
+.dates > .date:not(:last-child)::after{
+    content: "-";
+    margin: 15px;
+}
+
 .date{
     display: inline;
-    padding: 10px;
 }
 
 .intro{
@@ -69,6 +83,7 @@ a.entry-title:hover{
 
 .education, .skills, .employment, .interests{
     margin-left: 500px;
+    margin-right: 500px;
     color: #4f0c0e;
 }
 

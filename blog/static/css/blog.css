@@ -10,6 +10,23 @@
     text-decoration: none;
 }
 
+a:link, a:visited{
+    text-decoration: none;
+}
+
+a.cv_Button:link, a.cv_Button:visited{
+    color: #4f0c0e;
+}
+
+a.cv_Button:hover{
+    background-color: #f5fffa;
+}
+
+.cv_Button{
+    margin-left: 25px;
+    padding: 10px 25px;
+}
+
 .content {
     margin-left: 40px;
 }
