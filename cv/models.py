@@ -47,4 +47,4 @@ class Text_Entry(models.Model):
         self.save()
 
     def __str__(self):
-        return self.title
+        return self.type_id
