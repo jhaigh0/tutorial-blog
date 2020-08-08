@@ -26,6 +26,8 @@
                     <a class="intro entry-btn" href="{% url 'edit_text' pk=intro.pk %}" id="edit-text-btn">Edit</a>
                 {% endif %}
                 <p class="intro">{{ intro.text|linebreaksbr }}</p>
+            {% else %}
+                <a class="intro entry-btn" href="{% url 'new_text' %}" id="edit-text-btn">Edit</a>
             {% endif %}
             <div class="education">
                 <h2>Education</h2>
