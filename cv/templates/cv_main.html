@@ -23,9 +23,10 @@
         <div class="dyanmic-content">
             {% if not intro == None %}
                 {% if user.is_authenticated %}
-                    <a class="intro entry-btn" href="{% url 'edit_text' pk=intro.pk %}" id="edit-text-btn">Edit</a>
+                    <p class="into"><a class="intro text-content" href="{% url 'edit_text' pk=intro.pk %}" id="edit-text-btn">{{ intro.text|linebreaksbr }}</a></p>
+                {% else %}
+                    <p class="intro">{{ intro.text|linebreaksbr }}</p>
                 {% endif %}
-                <p class="intro">{{ intro.text|linebreaksbr }}</p>
             {% else %}
                 <a class="intro entry-btn" href="{% url 'new_text' %}" id="edit-text-btn">Edit</a>
             {% endif %}
