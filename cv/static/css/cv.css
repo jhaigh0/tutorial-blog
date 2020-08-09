@@ -33,6 +33,14 @@ a.entry-title:hover{
     background-color: #f5fffa;
 }
 
+a.text-content:link, a.text-content:visited{
+    color: #a27d56;
+}
+
+a.text-content:hover{
+    background-color: #f5fffa;
+}
+
 .page-header{
     text-align: center;
     background-color: #cfc89f;
@@ -81,7 +89,7 @@ a.entry-title:hover{
     text-align: center;
 }
 
-.education, .skills, .employment, .interests{
+.education, .skills, .employment, .interests, .refferances{
     margin-left: 500px;
     margin-right: 500px;
     color: #4f0c0e;

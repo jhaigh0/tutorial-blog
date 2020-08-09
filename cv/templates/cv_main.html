@@ -84,7 +84,7 @@
                     </div>
                 {% endfor %}
             </div>
-            <div class='interests'>
+            <div class="interests">
                 <h2>Interests</h2>
                 {% for item in interests %}
                     <div class="entry">
@@ -94,6 +94,18 @@
                             <h3>{{ item.title }}</h3>
                         {% endif %}
                         <p class="text-content">{{ item.text|linebreaksbr }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="refferances">
+                <h2>Refferances</h2>
+                {% for item in refferances %}
+                    <div class="entry">
+                        {% if user.is_authenticated %}
+                            <p><a href="{% url 'edit_text' pk=item.pk %}" class="text-content">{{ item.text|linebreaksbr }}</a></p>
+                        {% else %}
+                            <p class="text-content">{{ item.text|linebreaksbr }}</p>
+                        {% endif %}
                     </div>
                 {% endfor %}
             </div>
