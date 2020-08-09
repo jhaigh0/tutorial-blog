@@ -95,6 +95,10 @@ a.text-content:hover{
     color: #4f0c0e;
 }
 
+p.ref-list-item{
+    display: inline-block;
+}
+
 .entry{
     margin-left: 50px;
     color: #a27d56;

@@ -101,13 +101,11 @@
             <div class="refferances">
                 <h2>Refferances</h2>
                 {% for item in refferances %}
-                    <div class="entry">
-                        {% if user.is_authenticated %}
-                            <p><a href="{% url 'edit_text' pk=item.pk %}" class="text-content">{{ item.text|linebreaksbr }}</a></p>
-                        {% else %}
-                            <p class="text-content">{{ item.text|linebreaksbr }}</p>
-                        {% endif %}
-                    </div>
+                    {% if user.is_authenticated %}
+                        <p class="ref-list-item entry"><a href="{% url 'edit_text' pk=item.pk %}" class="text-content">{{ item.text|linebreaksbr }}</a></p>
+                    {% else %}
+                        <p class="ref-list-item entry">{{ item.text|linebreaksbr }}</p>
+                    {% endif %}
                 {% endfor %}
             </div>
         </div>
